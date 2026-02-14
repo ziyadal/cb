@@ -1,0 +1,17 @@
+.env
+.gradio/
+.python-version
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.pytest_cache/
+.mypy_cache/
+
+# Local vector DB artifacts
+vector_db/
+property_vector_db/
+
+# OS/editor noise
+.DS_Store
+Thumbs.db
