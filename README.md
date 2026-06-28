@@ -6,7 +6,16 @@ A RAG-powered investment advisor for the UAE off-plan property market. It turns 
 
 ---
 
-## What it does
+## How it works
+
+```mermaid
+flowchart LR
+    U["Investor input<br/>hard constraints + soft intent"] --> R["RAG retriever<br/>tuned embeddings + chunking"]
+    KB["Knowledge base<br/>UAE off-plan listings + docs"] --> R
+    R --> L["LangChain reasoning<br/>stateful preference matching"]
+    L --> O["Ranked, explained<br/>recommendations"]
+    O --> UI["Gradio interface"]
+```
 
 1. **Ingests** UAE off-plan listings and supporting documents into a knowledge base.
 2. **Retrieves** the most relevant listings for a given investor profile using a tuned RAG pipeline.
